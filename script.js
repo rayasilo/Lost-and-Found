@@ -6,6 +6,7 @@ const firebaseConfig = {
 const firebaseConfig = {
   apiKey: "AIzaSyBDqhvFzPO3iPxWQis4Hu_IrMl1Se6mMdA",
   authDomain: "lost-and-found-93a0c.firebaseapp.com",
+  databaseURL: "https://lost-and-found-93a0c-default-rtdb.firebaseio.com/",
   projectId: "lost-and-found-93a0c",
   storageBucket: "lost-and-found-93a0c.appspot.com",
   messagingSenderId: "692970744338",
