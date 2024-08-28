@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Lost and Found System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Lost and Found System</h1>
+        
+        <div class="form-section">
+            <h2>Report Lost/Found Item</h2>
+            <form id="itemForm">
+                <label for="itemType">Item Type:</label>
+                <select id="itemType" required>
+                    <option value="lost">Lost</option>
+                    <option value="found">Found</option>
+                </select>
+
+                <label for="itemDescription">Item Description:</label>
+                <textarea id="itemDescription" placeholder="Describe the item..." required></textarea>
+                <label for="itemLocation">Location:</label>
+                <input type="text" id="itemLocation" placeholder="Location of lost/found" required>
+
+                <label for="itemContact">Your Contact:</label>
+                <input type="text" id="itemContact" placeholder="Email or Phone" required>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div class="list-section">
+            <h2>Reported Items</h2>
+            <div id="itemsList">
+                <!-- Reported items will appear here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
