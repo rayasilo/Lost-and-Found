@@ -25,6 +25,7 @@ document.getElementById("itemForm").addEventListener("submit", function(event) {
     // Get values from the form
     const itemType = document.getElementById("itemType").value;
     const itemDescription = document.getElementById("itemDescription").value;
+    const itemDescription = document.getElementById("itemDescription").value;
     const itemContact = document.getElementById("itemContact").value;
 
     // Create a new item in Firebase
@@ -32,6 +33,7 @@ document.getElementById("itemForm").addEventListener("submit", function(event) {
     newItemRef.set({
         type: itemType,
         description: itemDescription,
+        location: itemLocation,
         contact: itemContact
     });
 
@@ -48,6 +50,7 @@ database.ref('items').on('child_added', function(snapshot) {
     itemElement.innerHTML = `
         <h3>${item.type.charAt(0).toUpperCase() + item.type.slice(1)} Item</h3>
         <p><strong>Description:</strong> ${item.description}</p>
+        <p><strong>Location:</strong> ${item.location}</p>
         <p><strong>Contact:</strong> ${item.contact}</p>
     `;
 
